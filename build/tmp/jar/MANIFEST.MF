@@ -1,4 +1,4 @@
 Manifest-Version: 1.0
-Main-Class: com.build.classes.java.main.com.github.tix_measurements.time
- .client.Main.class
+Class-Path: 
+Main-Class: com.github.tix_measurements.time.client.Main
 

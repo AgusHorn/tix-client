@@ -52,6 +52,7 @@ public class Main {
             Setup.cliInstall(installation, port);
             startReporting();
         } else {
+            System.err.println("No arguments entered when executing the client. Please provide: username, password, installation and port ");
 //            Main.launch(args);
         }
     }

@@ -65,6 +65,16 @@ jacoco {
     toolVersion = "0.7.6.201602180812"
 }
 
+
+jar {
+    manifest {
+        attributes(
+                'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+                'Main-Class': 'com.github.tix_measurements.time.client.Main'
+        )
+    }
+}
+
 //jacocoTestReport {
 //    reports {
 //        xml.enabled true
