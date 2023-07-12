@@ -55,9 +55,9 @@ public class Reporter {
 
     static {
         WORKER_THREADS = 1;
-        SERVER_IP = "200.10.202.29";
-        DEFAULT_CLIENT_PORT = 4501;
-        DEFAULT_SERVER_PORT = 4500;
+        SERVER_IP = "168.96.251.137";
+        DEFAULT_CLIENT_PORT = 5000;
+        DEFAULT_SERVER_PORT = 443;
 
         MAX_UDP_PACKET_SIZE = 4096 + 1024;
         LONG_PACKET_MAX_RETRIES = 5;

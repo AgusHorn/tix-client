@@ -21,40 +21,53 @@ public class Main {
 //    private Stage prefStage;
 
     public static void main(String[] args) {
-        if (args.length > 0) {
+//        Dotenv dotenv = null;
+//        dotenv = Dotenv.configure().load();
             cli = true;
-            try {
-                username = args[0].replace("\"", "\\\"");
-            } catch (RuntimeException e) {
-                System.err.println("Username missing.");
-                System.exit(1);
-            }
-            try {
-                password = args[1].replace("\"", "\\\"");
-            } catch (RuntimeException e) {
-                System.err.println("Password missing.");
-                System.exit(1);
-            }
-            try {
-                installation = args[2].replace("\"", "\\\"");
-            } catch (RuntimeException e) {
-                System.err.println("Installation name missing.");
-                System.exit(1);
-            }
-            try {
-                port = Integer.parseInt(args[3]);
-            } catch (RuntimeException e) {
-                System.err.println("Port number missing or cannot be parsed.");
-                System.exit(1);
-            }
+//            try {
+//                username = args[0].replace("\"", "\\\"");
+//            } catch (RuntimeException e) {
+//                System.err.println("Username missing.");
+//                System.exit(1);
+//            }
+//            try {
+//                password = args[1].replace("\"", "\\\"");
+//            } catch (RuntimeException e) {
+//                System.err.println("Password missing.");
+//                System.exit(1);
+//            }
+//            try {
+//                installation = args[2].replace("\"", "\\\"");
+//            } catch (RuntimeException e) {
+//                System.err.println("Installation name missing.");
+//                System.exit(1);
+//            }
+//            try {
+//                port = Integer.parseInt(args[3]);
+//            } catch (RuntimeException e) {
+//                System.err.println("Port number missing or cannot be parsed.");
+//                System.exit(1);
+//            }
+//            username = System.getenv("USERNAME");
+//            password = System.getenv("PASSWORD");
+//            installation = System.getenv("INSTALLATION");
+        username = "ahorn@fi.uba.ar";
+        password = "TixAgustin1";
+        installation = "LinuxAgus";
+        port = 5000;
+//            System.out.println(username);
+//            port = Integer.getInteger(System.getenv("PORT"));
+
             preferences = Preferences.userRoot().node("/com/tix/client" + installation);
+            System.out.println("Antes del cliLogin");
             Setup.cliLogin(username, password);
             Setup.cliInstall(installation, port);
+            System.out.println("Antes de empezar a reportar");
             startReporting();
-        } else {
-            System.err.println("No arguments entered when executing the client. Please provide: username, password, installation and port ");
-//            Main.launch(args);
-        }
+//        } else {
+//            System.err.println("No arguments entered when executing the client. Please provide: username, password, installation and port ");
+////            Main.launch(args);
+//        }
     }
 
     /**

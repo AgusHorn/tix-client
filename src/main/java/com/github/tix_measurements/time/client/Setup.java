@@ -32,7 +32,7 @@ public class Setup {
                     .setSSLHostnameVerifier(new NoopHostnameVerifier())
                     .build();
 
-            final HttpPost request = new HttpPost("https://tix.innova-red.net/api/login");
+            final HttpPost request = new HttpPost("https://tix.ext.tupac.gob.ar/api/login");
             final String json = "{\"username\": \"" + username + "\",\"password\": \"" + password + "\"}";
             final StringEntity params = new StringEntity(json, org.apache.http.entity.ContentType.APPLICATION_JSON);
             request.setHeader("Content-Type", "application/json");
@@ -88,7 +88,7 @@ public class Setup {
 
             if (userID != 0 && keyPair != null && token != null && installationInput != null) {
 
-                final HttpPost request = new HttpPost("https://tix.innova-red.net/api/user/" + userID + "/installation");
+                final HttpPost request = new HttpPost("https://tix.ext.tupac.gob.ar/api/user/" + userID + "/installation");
 
                 final byte[] pubBytes = Base64.getEncoder().encode(keyPair.getPublic().getEncoded());
                 final String publicString = new String(pubBytes);
