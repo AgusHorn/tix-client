@@ -51,8 +51,8 @@ public class Main {
 //            username = System.getenv("USERNAME");
 //            password = System.getenv("PASSWORD");
 //            installation = System.getenv("INSTALLATION");
-        username = "ahorn@fi.uba.ar";
-        password = "TixAgustin1";
+        username = "testing";
+        password = "testing";
         installation = "LinuxAgus";
         port = 5000;
 //            System.out.println(username);
